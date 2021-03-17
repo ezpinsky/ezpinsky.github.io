@@ -1592,6 +1592,16 @@ article:last-child {
 	width: 100%;
 }
 
+.image i {
+	display: block;
+	width: 100%;
+}
+
+.center img {
+	display: block;
+	width: 100%;
+}
+
 .image.featured {
 	display: block;
 	width: 100%;
