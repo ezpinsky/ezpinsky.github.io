@@ -85,6 +85,23 @@
 			</div>
 		</article>
 
+
+    		<!-- Feature 3 -->
+		<article class="container box style1 right">
+			<a href="#" class="image fit"><img src="images/InstaClone2.jpg" alt="" /></a>
+			<div class="inner">
+				<header>
+					<a target="_blank" href="https://instaclone-group.herokuapp.com/landing">
+						<h2>InstaClone<br /></h2>
+					</a>
+				</header>
+				<p>
+					Instaclone is a social media application modeled on Instagram built using React, Flask, PostgreSQL and SQLAlchemy.
+          It currently supports image uploading, photo feed, follows, likes, and comments.
+				</p>
+			</div>
+		</article>
+
 		<!-- Portfolio -->
 		<!-- <article class="container box style2">
 			<header>
@@ -170,9 +187,8 @@
 		</article> -->
 
 		<!-- Generic -->
-		<!--
 			<article class="container box style3">
-				<header>
+				<!-- <header>
 					<h2>Generic Box</h2>
 					<p>Just a generic box. Nothing to see here.</p>
 				</header>
@@ -279,12 +295,26 @@
 							</tfoot>
 						</table>
 					</div>
-				</section>
+				</section> -->
+        <?php
+$email = $_POST['email']
+$name = $_POST['name']
+$subject = $_POST['subject']
+$message = $_POST['message']
+
+if($_POST["message"]) {
+mail("ezpinsky@gmail.com", $subject, $message,"From: $email \r\n");
+}
+header("Location: http://www.ezrapinsky.dev");
+
+?>
 				<section>
+
 					<header>
-						<h3>Form</h3>
+						<h3>Contact Me</h3>
 					</header>
-					<form method="post" action="#">
+					<form method="POST" action="https://formspree.io/f/xwkakgvw">
+					<!-- <form method="POST" action="contactform.php"> -->
 						<div class="row">
 							<div class="col-6 col-12-mobile">
 								<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
@@ -292,14 +322,14 @@
 							<div class="col-6 col-12-mobile">
 								<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
 							</div>
-							<div class="col-12">
+							<!-- <div class="col-12">
 								<select name="department" id="department">
 									<option value="">Choose a department</option>
 									<option value="1">Manufacturing</option>
 									<option value="2">Administration</option>
 									<option value="3">Support</option>
 								</select>
-							</div>
+							</div> -->
 							<div class="col-12">
 								<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
 							</div>
@@ -309,14 +339,14 @@
 							<div class="col-12">
 								<ul class="actions">
 									<li><input type="submit" value="Submit" /></li>
-									<li><input type="reset" class="style3" value="Clear Form" /></li>
+									<!-- <li><input type="reset" class="style3" value="Clear Form" /></li> -->
 								</ul>
 							</div>
 						</div>
 					</form>
 				</section>
 			</article>
-		-->
+		 -->
 
 		<section id="footer">
 			<ul class="icons">
